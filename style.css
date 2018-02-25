@@ -2,42 +2,89 @@
     margin: 0;
     padding: 0;
 }
-body {
-    width: 100%;
-}
-.top {
-    width: 100%;
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    align-items: flex-start;
-}
 .menubar {
-    display: flex;
-    align-self: stretch;
-}
-.logo {
-    flex: 1;
-}
-.menu {
-    display: flex;
-    flex: 1;
-    height: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "logo menu";
+    background-color: rgb(158, 78, 91);
 }
 .menu ul {
-    display: flex;
-    flex-flow: row wrap;
+    grid-area: menu;
+    text-align: center;
     list-style: none;
-    align-self: center;
-    justify-self: center;
 }
 .menu ul li {
-     text-align: center;
-     margin: 10px;
+    display: inline;
+    padding: 5px;
 }
 .header {
     text-align: center;
-     align-self: center;
-     justify-self: flex-end;
+    background-color: rgb(158, 78, 91);
+    height: 100px;
+    padding: 50px;
+}
+.team-text {
+    text-align: center;
+    padding: 15px;
+}
+.team-img {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3,33.33%);
+    grid-template-areas: "profile-pic1 profile-pic2 profile-pic3" 
+}
+
+.lib-pic {
+    background-color: pink;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: "picture-lib1 picture-lib2 picture-lib3 picture-lib4"
+}
+.lib-pic img {
+    padding: 10px;
+    width: 100px;
+}
+.lib-button {
+    padding: 20px;
+    text-align: center;
+    background-color: pink;
+}
+.contact-text {  
+     text-align: center;
+}
+.contact {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "textmessege gmap"
+}
+.homebar {
+    background-color: rgb(158, 78, 91)
+}
+.menu2 {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "menu2 logo menu2";
+    background-color: rgb(158, 78, 91);
+}
+.menu2 ul {
+    grid-area: menu;
+    text-align: center;
+    list-style: none;
+}
+.menu2 ul li {
+    display: inline;
+    padding: 5px;
+}
+.logo {
+    display: inline-block;
+}
+.logo p {
+    align-items: center;
 }
