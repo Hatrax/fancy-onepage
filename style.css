@@ -9,21 +9,41 @@
     grid-template-columns: repeat(2, auto);
     grid-template-areas: "logo menu";
     background-color: rgb(158, 78, 91);
+    color: white;
+}
+.logo {
+    text-align: center;
 }
 .menu ul {
     grid-area: menu;
     text-align: center;
-    list-style: none;
 }
 .menu ul li {
     display: inline;
     padding: 5px;
+    list-style: none;
+}
+.menu ul li a {
+    color: white;
+}
+.menu a:hover {
+    background-color: rgb(212, 207, 207);
+    color: black;
+}
+.top {
+    background-image: url(img/background.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
 }
 .header {
     text-align: center;
-    background-color: rgb(158, 78, 91);
+    background-color: rgba(158, 78, 91, 0.774);
     height: 100px;
     padding: 50px;
+    color:white;
 }
 .team-text {
     text-align: center;
@@ -31,47 +51,97 @@
 }
 .team-img {
     padding-bottom: 30px;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3,33.33%);
-    grid-template-areas: "profile-pic1 profile-pic2 profile-pic3" 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
-
+.profile-pic1 {
+    margin: 5px;
+    padding: 5px;
+}
+.team-img img {
+    width: 100px;
+}
+.team-img p {
+    width: 150px;
+}
+.lib {
+    background-color: #e9e9e9;
+    min-height: 180px;
+    
+}
 .lib-pic {
-    background-color: pink;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-areas: "picture-lib1 picture-lib2 picture-lib3 picture-lib4"
+  text-align: center;
 }
 .lib-pic img {
     padding: 10px;
     width: 100px;
+    margin-top: 10px;
 }
 .lib-button {
-    padding: 20px;
+    width: 100%;
     text-align: center;
-    background-color: pink;
+   margin-top: 10px;
 }
-.contact-text {  
+.buttonlight {
+    color: grey;
+    padding: 20px;
+    border:solid 1 rgb(3, 3, 3);
+    border-radius: 5%;
+    background-color: #fafafa;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;        
+}
+
+.buttonlight a {    text-decoration: none;
+    color: grey;
+}
+.buttonlight a:hover {
+    background-color: rgb(212, 207, 207);
+    color: black;
+}
+.contact-text {
+    padding-top: 30px;
      text-align: center;
+     background-color: rgb(158, 78, 91);
+     color:white;
 }
 .contact {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "textmessege gmap"
+    padding: 30px;
+    background-color: rgb(158, 78, 91);
+    display: flex;
+    justify-content: center;
 }
+.textmessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.gmap {
+    text-align: center;
+    color: white;
+}
+#map {
+    margin: 5px;
+    width:200px;
+    height:100px;
+}
+
 .homebar {
-    background-color: rgb(158, 78, 91)
+    background-color: rgb(59, 58, 58);
+    display: inline;
 }
 .menu2 {
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3, auto);
-    grid-template-areas: "menu2 logo menu2";
-    background-color: rgb(158, 78, 91);
+    background-color: rgb(59, 58, 58);
+}
+.social {
+    padding: 10px;
+}
+.social a:hover {
+    background-color: rgb(212, 207, 207);
+    color: black;
 }
 .menu2 ul {
     grid-area: menu;
@@ -82,9 +152,22 @@
     display: inline;
     padding: 5px;
 }
-.logo {
-    display: inline-block;
+.menu2 ul li a {
+    color: white;
 }
-.logo p {
-    align-items: center;
+.menu2 ul li a:hover {
+    background-color: rgb(212, 207, 207);
+    color: black;
+}
+.logo2 {
+    display: inline;
+    background-color: rgb(59, 58, 58);
+}
+.logo2 p {
+    color: white;
+    text-align: center;
+}
+footer {
+    background-color: rgb(59, 58, 58);
+    text-align: center;
 }
